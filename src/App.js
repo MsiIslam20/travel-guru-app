@@ -9,8 +9,6 @@ import {
 } from "react-router-dom";
 import PlaceDetails from './components/Places/PlaceDetails';
 import Header from './components/Header/Header';
-import Login from './components/Login/Login';
-import HeaderBlack from './components/Header/HeaderBlack';
 import SignUp from './components/Login/SignUp';
 import SearchPage from './components/SearchPage/SearchPage';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
@@ -22,25 +20,18 @@ function App() {
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
+        <Header></Header>
         <Switch>
           <Route exact path="/">
-            <Header></Header>
             <Home />
           </Route>
-          <Route path="/login">
-            <HeaderBlack />
-            <Login />
-          </Route>
           <Route path="/signup">
-            <HeaderBlack />
             <SignUp />
           </Route>
           <PrivateRoute path="/search/:id">
-            <HeaderBlack />
             <SearchPage />
           </PrivateRoute>
           <Route path="/places/:id">
-            <Header></Header>
             <PlaceDetails></PlaceDetails>
           </Route>        
         </Switch>

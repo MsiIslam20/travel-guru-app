@@ -14,6 +14,9 @@ const PlaceDetails = () => {
     const handleClick = (id) => {
         history.push(`/search/${id}`)
     }
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    }
 
     return (
         <div className="places-container">
@@ -24,7 +27,7 @@ const PlaceDetails = () => {
                         <p>{description}</p>
                     </div>
                     <div className="col-md-5 mx-auto">
-                        <form className="place-from">
+                        <form onSubmit={handleSubmit} className="place-from">
                             <label>Origin</label>
                             <input className="form-control" type="text" placeholder="ex- Dhaka" required/>
                             <label>Destination</label>
@@ -32,14 +35,14 @@ const PlaceDetails = () => {
                             <div className="row">
                                 <div className="col-md-6">
                                     <label>Form</label>
-                                    <input className="form-control" type="date" id="birthday" name="birthday" />
+                                    <input required className="form-control" type="date" id="birthday" name="birthday" />
                                 </div>
                                 <div className="col-md-6">
                                     <label>To</label>
-                                    <input className="form-control" type="date" id="birthday" name="birthday" />
+                                    <input required className="form-control" type="date" id="birthday2" name="birthday2" />
                                 </div>                                
                             </div>
-                            <button onClick={() => handleClick(id)} className="btn-custom btn btn-warning">Start Booking</button>
+                            <input type="submit" onClick={() => handleClick(id)} className="btn-custom btn btn-warning" value="Start Booking" />
                         </form>
                     </div>
                 </div>

@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import logo from '../../images/logo.png';
 import headerbg from '../../images/header-bg.png';
 import "./Header.css"
 import { Link } from 'react-router-dom';
+import { UserContext } from '../../App';
 
 const Header = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);  
+    console.log(loggedInUser);
     return (
         <>
             <nav className="navbar navbar-expand-lg fixed-top">
@@ -34,15 +37,12 @@ const Header = () => {
                                 <a className="nav-link" href="#0">Contact</a>
                             </li>  
                             <li className="nav-item">
-                                <Link className="link-btn btn btn-warning" to="/login">Login</Link>
+                                {loggedInUser.displayName ? <h6 className="userName">{loggedInUser.displayName}</h6> : <Link className="link-btn btn btn-warning" to="/signup">Login</Link>}
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
-            <div className="home-container">
-                <img className="home-bg" src={headerbg} alt=""/>
-            </div>
         </>
     );
 };

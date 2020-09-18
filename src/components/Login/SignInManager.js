@@ -13,7 +13,7 @@ export const handleGoogleSignIn = () => {
     return firebase.auth().signInWithPopup(provider)
     .then(res => {
       const {displayName, email } = res.user;
-      const signInUser = {name: displayName, email}
+      const signInUser = {displayName: displayName, email}
       return signInUser;
     })
     .catch(err => console.log(err))  
@@ -36,12 +36,12 @@ export const handleFBLogIn = () => {
     });
 }
 
-export const createUserWithEmailPassword = (email, password) => {
+export const createUserWithEmailPassword = (displayName, email, password) => {
     
     return firebase.auth().createUserWithEmailAndPassword(email, password)
     .then(res => {
       const newUserInfo = res.user;
-    //   updateUserName(name);
+      updateUserName(displayName);
       return newUserInfo;
     })
     .catch(error => {
@@ -55,25 +55,22 @@ export const logInUserWithEmailPassword = (email, password) => {
     return firebase.auth().signInWithEmailAndPassword(email, password)
     .then(res => {
       const newUserInfo = res.user;
+      newUserInfo.error = "";
       return newUserInfo;
 
     })
-    .catch(error => {
-      const newUserInfo = {}
-      return newUserInfo;    
-    })
 }
 
-// const updateUserName = name => {
+const updateUserName = displayName => {
 
-//     const user = firebase.auth().currentUser;
+    const user = firebase.auth().currentUser;
 
-//     user.updateProfile({
-//       displayName: name,
-//     }).then(function() {
-//       // Update successful.
-//     }).catch(function(error) {
-//       // An error happened.
-//     });
+    user.updateProfile({
+      displayName: displayName,
+    }).then(function() {
+      // Update successful.
+    }).catch(function(error) {
+      // An error happened.
+    });
 
-// }
+}

@@ -11,10 +11,22 @@
 }
 .form-inner .form-control{
     margin-bottom: 20px;
-}
-.form-control{
     padding: 30px 20px;
 }
+.pointer{
+    cursor: pointer;
+}
+.pointer:hover{
+    text-decoration: underline;
+}
+.error-msg{
+    color: red;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+/* .form-control{
+    padding: 30px 20px;
+} */
 .other-login .login-opt{
     padding: 10px 30px;
     border: 1px solid #ccc;

@@ -1,8 +1,9 @@
 .places-container{
-    position: absolute;
-    top: 130px;
     color: #fff;
     width: 100%;
+    background: url(../../images/header-bg.png) no-repeat center center;
+    height: 100vh;
+    padding-top: 150px;
 }
 
 .places-container h1{

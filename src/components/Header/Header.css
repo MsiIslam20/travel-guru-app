@@ -7,9 +7,16 @@
 .navbar-nav li a{
     color: #ffffff;
 }
+.navbar{
+    background: #737373d9;
+}
 .bg-navbar{
     background: #ffffff;
     border-bottom: 1px solid #ccc;
+}
+.userName{
+    padding: 10px 0px;
+    color: #ffc107;
 }
 .search-form{
     background: rgba(255, 255, 255, 0.2);
