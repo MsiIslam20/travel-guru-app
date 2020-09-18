@@ -116,7 +116,7 @@ const SignUp = () => {
                                     <div className="row">
                                         <div className="col-md-6">
                                             <input type="checkbox" id="vehicle1" name="vehicle1" />
-                                            <label for="vehicle1"> Remember Me</label>
+                                            <label htmlFor="vehicle1"> Remember Me</label>
                                         </div>
                                         <div className="col-md-6">
                                             <p className="text-right text-danger">Forget Password?</p>
