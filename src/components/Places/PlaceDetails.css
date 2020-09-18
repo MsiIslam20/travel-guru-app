@@ -1,0 +1,39 @@
+.places-container{
+    position: absolute;
+    top: 130px;
+    color: #fff;
+    width: 100%;
+}
+
+.places-container h1{
+    font-size: 97.6842px;
+    line-height: 117px;
+    color: #FFFFFF;
+}
+.place-from{
+    background: #FFFFFF;
+    border-radius: 5px;
+    padding: 25px;
+}
+.place-from label{
+    font-size: 16px;
+    line-height: 20px;
+    color: #818181;
+    font-weight: 500;
+}
+.place-from .form-control{
+    background: #F2F2F2;
+    border-radius: 5px;
+    border: 0px;
+    padding: 30px 15px;
+    color: #000;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.btn-custom{
+    width: 100%;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 20px 0px;
+}

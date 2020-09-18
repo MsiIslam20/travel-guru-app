@@ -1,0 +1,21 @@
+.home-inner-main{
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+}
+.home-inner{
+    height: 100vh;
+}
+.home-title{
+    padding-left: 20px;
+}
+.home-title h1{
+    font-size: 90px;
+    line-height: 117px;
+    color: #FFFFFF;
+}
+.home-title p{
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+}

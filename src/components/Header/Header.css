@@ -1,0 +1,41 @@
+.logo{
+    width: 100px;
+}
+.navbar-nav li{
+    padding-left: 10px;
+}
+.navbar-nav li a{
+    color: #ffffff;
+}
+.bg-navbar{
+    background: #ffffff;
+    border-bottom: 1px solid #ccc;
+}
+.search-form{
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    width: 370px !important;
+}
+.search-form::placeholder {
+    color: white;
+}
+.search-form:focus {
+    background: rgba(255, 255, 255, 0.2);
+}
+.home-container .home-bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.home-container{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.link-btn{
+    padding: 8px 20px;
+    color: #000;
+}
+.header-bl li a{
+    color: #000;
+}
