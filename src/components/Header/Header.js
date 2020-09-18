@@ -1,14 +1,12 @@
 import React, { useContext } from 'react';
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import logo from '../../images/logo.png';
-import headerbg from '../../images/header-bg.png';
 import "./Header.css"
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../App';
 
 const Header = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);  
-    console.log(loggedInUser);
     return (
         <>
             <nav className="navbar navbar-expand-lg fixed-top">

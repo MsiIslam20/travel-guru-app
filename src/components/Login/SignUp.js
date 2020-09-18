@@ -5,7 +5,7 @@ import fb from '../../images/fb.png'
 import google from '../../images/google.png';
 import { UserContext } from '../../App';
 import { handleFBLogIn, handleGoogleSignIn, createUserWithEmailPassword, initializeLoginFramework, logInUserWithEmailPassword } from './SignInManager';
-import './Login.css'
+import './SignUp.css'
 
 const SignUp = () => {
 

@@ -22,7 +22,7 @@ const SearchPage = () => {
 
     const {id} = useParams();
     const product = fakeData.filter(place => place.id === parseInt(id));
-    const {name, description, hotels} = product[0];
+    const {name, hotels} = product[0];
     
     const [map, setMap] = React.useState(null)
  
