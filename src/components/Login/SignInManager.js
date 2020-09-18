@@ -24,9 +24,9 @@ export const handleFBLogIn = () => {
     const fbProvider = new firebase.auth.FacebookAuthProvider();
     return firebase.auth().signInWithPopup(fbProvider).then(function(result) {
         const token = result.credential.accessToken;
-        const user = result.user;
-        user.isSuccess =  true;
-        return user;
+        const {displayName, email} = result.user;
+        const signInUser = {displayName: displayName, email}
+        return signInUser;
 
     }).catch(function(error) {
         var errorCode = error.code;
