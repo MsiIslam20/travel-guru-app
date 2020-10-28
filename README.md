@@ -9,3 +9,9 @@ This is a Travel agency web application. A person can book any destination where
 - React.js
 - Bootstrap4
 - CSS3
+
+## Features
+
+- See available hotels in desire location
+- Google map API
+- Admin Panel
