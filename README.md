@@ -3,3 +3,9 @@ This is a Travel agency web application. A person can book any destination where
 <br>
 <br>
 [Live Website](https://travel-guru-app-7f9e1.web.app/)
+
+## Thechnology Used
+
+- React.js
+- Bootstrap4
+- CSS3
